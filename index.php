@@ -1,3 +1,31 @@
+<?php
+
+require "dbBroker.php";
+require "models/Zaposleni.php";
+
+$poruka = "";
+
+session_start();
+if(isset($_POST['username']) && isset($_POST['password'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $zaposleni = new Zaposleni('' , '', '', $username, $password);
+    $odgovor = Zaposleni::login($zaposleni, $konekcija);
+    
+    if($odgovor->num_rows==1){
+        $_SESSION['user_id'] = $zaposleni->zaposleniID;
+        setcookie("user", $username, time() + 3600);
+        header('Location: home.php');
+        exit();
+    }else{
+        $poruka="Pogrešno korisničko ime ili lozinka!";
+    }
+
+}
+
+?>
+
 
 <!DOCTYPE html><html lang="en">
 <head>
