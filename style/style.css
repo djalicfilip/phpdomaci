@@ -1,0 +1,121 @@
+:root {
+    --primary: #a6a5a5;
+    --light: #F8F8F8;
+    --dark: #252525;
+}
+
+body{
+    background: url(../img/summer.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+h1,
+h2,
+.h1,
+.h2,
+.fw-bold {
+    font-weight: 600 !important;
+    color:var(--dark) !important;
+}
+
+h3,
+h4,
+.h3,
+.h4,
+.fw-medium {
+    font-weight: 500 !important;
+    color:var(--dark) !important;
+}
+
+h5,
+h6,
+.h5,
+.h6,
+.fw-normal {
+    font-weight: 400 !important;
+    color:var(--light) !important;
+}
+
+
+
+.form-control, .form-control:hover, .form-control:focus, .form-control:root{
+
+    background-color: rgba(60, 34, 177, 0.781);
+    font-weight: 900 !important;
+    color: black;
+    box-shadow: none;
+    
+}
+
+.col-md-5{
+    padding-left: 100px;
+}
+
+
+.BtnForm{
+    background-color: rgba(108, 98, 222, 0.781);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    font-weight: 800;
+    border: 2px solid rgba(30, 23, 33, 0.781);
+    color: #2a2a2a;
+    width: 40%;
+    
+}
+
+.BtnFormP{
+    width: 40%;
+    background-color: rgba(49, 29, 109, 0.781);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    font-weight: 800;
+    border: 1px double rgba(21, 15, 22, 0.781);
+    color: #2a2a2a;
+    
+
+}
+
+a.BtnForm:hover{
+    color:#175066;
+}
+
+#poruka{
+    color: rgba(0, 32, 78, 0.781) !important;
+    font-family:"Open Sans",sans-serif;
+    text-transform: capitalize;
+    font-size:2rem;
+
+}
+
+
+#odg{
+    color: rgba(21, 10, 106, 0.781) !important;
+}
+
+
+.table{
+    background-color: rgba(7, 29, 100, 0.655) !important;
+    border: 2px solid rgba(25, 7, 32, 0.781);
+    color: #2a2a2a;
+    width: 50%;
+    margin-bottom: 50px;
+    margin-left: 24%;
+
+}
+
+.table:hover{
+    color: #235eab;
+    
+}
+
+
+
