@@ -67,6 +67,52 @@ if (isset($_COOKIE["user"])){
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>
     
+    <script>
+        function popuni() {
+            let zaposleni = '1';
+            let sortiranje = 'asc';
+            $.ajax({
+                url: "pretragaRezervacija.php",
+                data: {
+                    zaposleni: zaposleni,
+                    sortiranje: sortiranje
+                },
+                success: function (podaci) {
+                    $("#rezultat").html(podaci);
+                }
+            });
+        }
+        popuni();
+
+        function popuniZaposlene() {
+            $.ajax({
+                url: 'popuniZaposlene.php',
+                success: function (data) {
+                   $("#zaposleni").html(data);
+                }
+            });
+        }
+        popuniZaposlene();
+ 
+
+
+        function filtriraj() {
+            let zaposleni = $("#zaposleni").val();
+            let sortiranje = $("#sortiranje").val();
+            $.ajax({
+                url: 'pretragaRezervacija.php',
+                data: {
+                    zaposleni: zaposleni,
+                    sortiranje: sortiranje
+                },
+                success: function (data) {
+                    $("#rezultat").html(data);
+                }
+            });
+        }
+
+    </script>
+
 
 </body>
 </html>

@@ -92,7 +92,42 @@ if(isset($_POST['dodaj'])){
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        function popuniZaposlene() {
 
+            $.ajax({
+                url: 'popuniZaposlene.php',
+                success: function (data) {
+                   $("#zaposleni").html(data);
+                }
+            });
+        }
+        popuniZaposlene();
+ 
+        function popuniKlijente() {
+
+            $.ajax({
+                url: 'popuniKlijente.php',
+                success: function (data) {
+                $("#klijent").html(data);
+                }
+            });
+        }
+        popuniKlijente();
+
+        function popuniAranzmane() {
+
+        $.ajax({
+            url: 'popuniAranzmane.php',
+            success: function (data) {
+            $("#aranzman").html(data);
+            }
+        });
+        }
+        popuniAranzmane();
+
+
+    </script>
 
  </body>
 
